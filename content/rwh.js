@@ -14,7 +14,7 @@ Components.utils.import('resource://gre/modules/XPCOMUtils.jsm');
 Components.utils.import('resource://gre/modules/AddonManager.jsm');
 
 // ReplyWithHeader Add-On ID
-const ReplyWithHeaderAddOnID = 'replywithheader@myjeeva.com';
+const ReplyWithHeaderAddOnID = 'replywithheadercn@cw.song';
 
 var ReplyWithHeader = {
   addOnName: '',
@@ -27,7 +27,8 @@ var ReplyWithHeader = {
   hdrCnt: 4,
   bqStyleStr: 'border:none !important; margin-left:0px !important; margin-right:0px !important; margin-top:0px !important; padding-left:0px !important; padding-right:0px !important',
   dateFormat12hrs: 'ddd, MMM d, yyyy h:mm a',
-  dateFormat24hrs: 'ddd, MMM d, yyyy H:mm',
+  //dateFormat24hrs: 'ddd, MMM d, yyyy H:mm',
+  dateFormat24hrs: 'yyyy年MM月d日 H:mm',
 
   get isMacOSX() {
     return (this.appRuntime.OS == 'Darwin');
@@ -238,7 +239,8 @@ var ReplyWithHeader = {
 
     if (this.Prefs.dateFormat == 0) { // jshint ignore:line
       this.Log.debug('Locale date format');
-      nd = DateFormat.format.date(d, dateFmtStr) + ' ' + this.tzAbbr(d);
+      //nd = DateFormat.format.date(d, dateFmtStr) + ' ' + this.tzAbbr(d);
+	  nd = DateFormat.format.date(d, dateFmtStr) ;
     } else {
       this.Log.debug('GMT date format');
       var utc = new Date(d.getTime() + d.getTimezoneOffset() * 60000);
@@ -420,29 +422,29 @@ var ReplyWithHeader = {
 
       rwhHdr += this.createBrTags(this.Prefs.beforeHdrSpaceCnt);
 
-      rwhHdr += htmlTagPrefix + '<b>From:</b> ' + pHeader.from + htmlTagSuffix;
+      rwhHdr += htmlTagPrefix + '<b>发件人:</b> ' + pHeader.from + htmlTagSuffix;
 
       if (headerQuotLblSeq == 0) { // jshint ignore:line
-        rwhHdr += htmlTagPrefix + '<b>Subject:</b> ' + pHeader.subject + htmlTagSuffix;
-        rwhHdr += htmlTagPrefix + '<b>Date:</b> ' + pHeader.date + htmlTagSuffix;
-        rwhHdr += htmlTagPrefix + '<b>To:</b> ' + pHeader.to + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>主题:</b> ' + pHeader.subject + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>发送时间:</b> ' + pHeader.date + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>收件人:</b> ' + pHeader.to + htmlTagSuffix;
 
         if (pHeader.cc) {
-          rwhHdr += htmlTagPrefix + '<b>Cc:</b> ' + pHeader.cc + htmlTagSuffix;
+          rwhHdr += htmlTagPrefix + '<b>抄送:</b> ' + pHeader.cc + htmlTagSuffix;
         }
       } else if (headerQuotLblSeq == 1) {
-        rwhHdr += htmlTagPrefix + '<b>Sent:</b> ' + pHeader.date + htmlTagSuffix;
-        rwhHdr += htmlTagPrefix + '<b>To:</b> ' + pHeader.to + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>发送时间:</b> ' + pHeader.date + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>收件人:</b> ' + pHeader.to + htmlTagSuffix;
 
         if (pHeader.cc) {
-          rwhHdr += htmlTagPrefix + '<b>Cc:</b> ' + pHeader.cc + htmlTagSuffix;
+          rwhHdr += htmlTagPrefix + '<b>抄送:</b> ' + pHeader.cc + htmlTagSuffix;
         }
 
-        rwhHdr += htmlTagPrefix + '<b>Subject:</b> ' + pHeader.subject + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>主题:</b> ' + pHeader.subject + htmlTagSuffix;
 
       } else if (headerQuotLblSeq == 2) {
-        rwhHdr += htmlTagPrefix + '<b>Sent:</b> ' + pHeader.date + htmlTagSuffix;
-        rwhHdr += htmlTagPrefix + '<b>Subject:</b> ' + pHeader.subject + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>发送时间:</b> ' + pHeader.date + htmlTagSuffix;
+        rwhHdr += htmlTagPrefix + '<b>主题:</b> ' + pHeader.subject + htmlTagSuffix;
       }
 
     } else { // for plain/text emails
@@ -851,7 +853,7 @@ var ReplyWithHeader = {
 
   handleMailCompose: function() {
     /*
-     * ReplyWithHeader has to be enabled; extensions.replywithheader.enable=true and
+     * ReplyWithHeader has to be enabled; extensions.replywithheadercn.enable=true and
      * ReplyWithHeader.isOkayToMoveOn must return true
      * Add-On comes into play :)
      */
@@ -902,7 +904,7 @@ var ReplyWithHeader = {
   showAlert: function(str) {
     if (str) {
       try {
-        this.alerts.showAlertNotification('chrome://replywithheader/skin/icon-64.png',
+        this.alerts.showAlertNotification('chrome://replywithheadercn/skin/icon-64.png',
           'ReplyWithHeader', str, false, '', null, '');
       } catch (ex) {
         this.Log.errorWithException('Unable to show RWH notify alert.', ex);

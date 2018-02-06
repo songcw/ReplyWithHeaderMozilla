@@ -6,10 +6,10 @@
 # You can download a copy of license at https://github.com/jeevatkm/ReplyWithHeaderMozilla/blob/master/LICENSE.txt
 #
 
-content replywithheader content/
-resource replywithheader modules/
+content replywithheadercn content/
+resource replywithheadercn modules/
 
-skin    replywithheader default/1.0 skin/
+skin    replywithheadercn default/1.0 skin/
 
 # messengercompose.xul [MailCompose Window]
-overlay chrome://messenger/content/messengercompose/messengercompose.xul    chrome://replywithheader/content/messengerComposeOverlay.xul
+overlay chrome://messenger/content/messengercompose/messengercompose.xul    chrome://replywithheadercn/content/messengerComposeOverlay.xul

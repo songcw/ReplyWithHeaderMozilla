@@ -22,26 +22,26 @@
 
     <prefpane id="rwhPane" orient="vertical">
         <preferences id="rwhGlobalPref">
-            <preference id="pref-enableRwh" name="extensions.replywithheader.enable" type="bool" instantApply="true" />
-            <preference id="pref-fromAttributionStyle" name="extensions.replywithheader.header.from.style" type="int" instantApply="true" />
-            <preference id="pref-toccAttributionStyle" name="extensions.replywithheader.header.tocc.style" type="int" instantApply="true" />
-            <preference id="pref-quotSeqAttributionStyle" name="extensions.replywithheader.header.lblseq.style" type="int" instantApply="true" />
-            <preference id="pref-hdrFontface" name="extensions.replywithheader.header.font.face" type="string" instantApply="true" />
-            <preference id="pref-hdrFontsize" name="extensions.replywithheader.header.font.size" type="int" instantApply="true" />
-            <preference id="pref-hdrFontcolor" name="extensions.replywithheader.header.font.color" type="string" instantApply="true" />
-            <preference id="pref-spaceBeforeSep" name="extensions.replywithheader.header.separator.space.before" type="int" instantApply="true" />
-            <preference id="pref-spaceBeforeHdr" name="extensions.replywithheader.header.space.before" type="int" instantApply="true" />
-            <preference id="pref-spaceAfterHdr" name="extensions.replywithheader.header.space.after" type="int" instantApply="true" />
-            <preference id="pref-hdrSepLineSize" name="extensions.replywithheader.header.separator.line.size" type="int" instantApply="true" />
-            <preference id="pref-hdrSepLineColor" name="extensions.replywithheader.header.separator.line.color" type="string" instantApply="true" />
-            <preference id="pref-transSubjectPrefix" name="extensions.replywithheader.trans.subject.prefix" type="bool" instantApply="true" />
-            <preference id="pref-cleanBlockQuote" name="extensions.replywithheader.clean.blockquote" type="bool" instantApply="true" />
-            <preference id="pref-cleanNewBlockQuote" name="extensions.replywithheader.clean.new.blockquote" type="bool" instantApply="true" />
-            <preference id="pref-cleanGreaterThanChar" name="extensions.replywithheader.clean.char.greaterthan" type="bool" instantApply="true" />
-            <preference id="pref-excludePlainTextHdrPrefix" name="extensions.replywithheader.clean.pln.hdr.prefix" type="bool" instantApply="true" />
-            <preference id="pref-quotDateAttributionStyle" name="extensions.replywithheader.header.date.format" type="int" instantApply="true" />
-            <preference id="pref-quotTimeAttributionStyle" name="extensions.replywithheader.header.time.format" type="int" instantApply="true" />
-            <preference id="pref-enableRwhDebugMode" name="extensions.replywithheader.debug" type="bool" instantApply="true" />
+            <preference id="pref-enableRwh" name="extensions.replywithheadercn.enable" type="bool" instantApply="true" />
+            <preference id="pref-fromAttributionStyle" name="extensions.replywithheadercn.header.from.style" type="int" instantApply="true" />
+            <preference id="pref-toccAttributionStyle" name="extensions.replywithheadercn.header.tocc.style" type="int" instantApply="true" />
+            <preference id="pref-quotSeqAttributionStyle" name="extensions.replywithheadercn.header.lblseq.style" type="int" instantApply="true" />
+            <preference id="pref-hdrFontface" name="extensions.replywithheadercn.header.font.face" type="string" instantApply="true" />
+            <preference id="pref-hdrFontsize" name="extensions.replywithheadercn.header.font.size" type="int" instantApply="true" />
+            <preference id="pref-hdrFontcolor" name="extensions.replywithheadercn.header.font.color" type="string" instantApply="true" />
+            <preference id="pref-spaceBeforeSep" name="extensions.replywithheadercn.header.separator.space.before" type="int" instantApply="true" />
+            <preference id="pref-spaceBeforeHdr" name="extensions.replywithheadercn.header.space.before" type="int" instantApply="true" />
+            <preference id="pref-spaceAfterHdr" name="extensions.replywithheadercn.header.space.after" type="int" instantApply="true" />
+            <preference id="pref-hdrSepLineSize" name="extensions.replywithheadercn.header.separator.line.size" type="int" instantApply="true" />
+            <preference id="pref-hdrSepLineColor" name="extensions.replywithheadercn.header.separator.line.color" type="string" instantApply="true" />
+            <preference id="pref-transSubjectPrefix" name="extensions.replywithheadercn.trans.subject.prefix" type="bool" instantApply="true" />
+            <preference id="pref-cleanBlockQuote" name="extensions.replywithheadercn.clean.blockquote" type="bool" instantApply="true" />
+            <preference id="pref-cleanNewBlockQuote" name="extensions.replywithheadercn.clean.new.blockquote" type="bool" instantApply="true" />
+            <preference id="pref-cleanGreaterThanChar" name="extensions.replywithheadercn.clean.char.greaterthan" type="bool" instantApply="true" />
+            <preference id="pref-excludePlainTextHdrPrefix" name="extensions.replywithheadercn.clean.pln.hdr.prefix" type="bool" instantApply="true" />
+            <preference id="pref-quotDateAttributionStyle" name="extensions.replywithheadercn.header.date.format" type="int" instantApply="true" />
+            <preference id="pref-quotTimeAttributionStyle" name="extensions.replywithheadercn.header.time.format" type="int" instantApply="true" />
+            <preference id="pref-enableRwhDebugMode" name="extensions.replywithheadercn.debug" type="bool" instantApply="true" />
         </preferences>
 
         <hbox align="center">
@@ -211,7 +211,7 @@
                 </tabpanel>
                 <tabpanel orient="vertical">
                     <hbox align="center" style="margin-top: 30px">
-                        <image id="abtRwhLogo" src='chrome://replywithheader/skin/icon-64.png' width='64' height='64'
+                        <image id="abtRwhLogo" src='chrome://replywithheadercn/skin/icon-64.png' width='64' height='64'
                                style="margin-left:100px"/>
                         <label id="abtRwhCaption" value="ReplyWithHeader" style="font-weight:bold;" />
                         <label id="abtRwhCopyrights" value="&#169; 2017 Jeevanandam M."
@@ -230,7 +230,7 @@
                         <groupbox id="abtGrpBoxRwhDonate" style="width:430px;padding-bottom:10px;margin:0">
                             <caption label="Support ReplyWithHeader" style="font-size:13px" />
                             <hbox align="center" style="margin-bottom:10px;margin-top:5px">
-                                <image src='chrome://replywithheader/skin/bitcoin-24.png' width='24' height='24'
+                                <image src='chrome://replywithheadercn/skin/bitcoin-24.png' width='24' height='24'
                                        onclick="ReplyWithHeader.Prefs.copyBtcAddress();"
                                        tooltiptext="Click here to copy BTC address."
                                        style="cursor: pointer" />
@@ -238,7 +238,7 @@
                                        onclick="ReplyWithHeader.Prefs.copyBtcAddress();"
                                        tooltiptext="Click here to copy BTC address." />
                                 <vbox style="margin-left:15px">
-                                <image src='chrome://replywithheader/skin/paypal-btn.png' width='142' height='27'
+                                <image src='chrome://replywithheadercn/skin/paypal-btn.png' width='142' height='27'
                                        onclick="ReplyWithHeader.Prefs.openPaypal();"
                                        style="cursor: pointer"
                                        tooltiptext="Click here to Donate via Paypal." />
@@ -251,7 +251,7 @@
         </tabbox>
     </prefpane>
 
-    <script type="application/javascript" src="chrome://replywithheader/content/rwh.js"/>
-    <script type="application/javascript" src="chrome://replywithheader/content/rwh-prefs.js"/>
+    <script type="application/javascript" src="chrome://replywithheadercn/content/rwh.js"/>
+    <script type="application/javascript" src="chrome://replywithheadercn/content/rwh-prefs.js"/>
 
 </prefwindow>

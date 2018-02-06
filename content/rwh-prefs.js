@@ -14,15 +14,15 @@ Components.utils.import('resource://gre/modules/XPCOMUtils.jsm');
 
 ReplyWithHeader.Prefs = {
   getIntPref: function(p) {
-    return this.branch.getIntPref('extensions.replywithheader.' + p);
+    return this.branch.getIntPref('extensions.replywithheadercn.' + p);
   },
 
   getBoolPref: function(p) {
-    return this.branch.getBoolPref('extensions.replywithheader.' + p);
+    return this.branch.getBoolPref('extensions.replywithheadercn.' + p);
   },
 
   getStringPref: function(p) {
-    return this.branch.getCharPref('extensions.replywithheader.' + p);
+    return this.branch.getCharPref('extensions.replywithheadercn.' + p);
   },
 
   get isEnabled() {

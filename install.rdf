@@ -11,16 +11,16 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>replywithheader@myjeeva.com</em:id>
-    <em:name>ReplyWithHeader</em:name>
-    <em:version>1.5</em:version>
+    <em:id>replywithheadercn@cw.song</em:id>
+    <em:name>Reply With Chinese Header</em:name>
+    <em:version>0.1</em:version>
     <em:type>2</em:type>
     <em:unpack>false</em:unpack>
     <!-- <em:bootstrap>true</em:bootstrap> -->
-    <em:creator>Jeevanandam M.</em:creator>
-    <em:description>Outlook style headers and few goodies for Thunderbird &amp; Postbox.</em:description>
+    <em:creator>songcw</em:creator>
+    <em:description>Outlook style headers with chinese.</em:description>
     <em:homepageURL>http://myjeeva.com/replywithheader-mozilla</em:homepageURL>
-    <em:optionsURL>chrome://replywithheader/content/rwh-prefs.xul</em:optionsURL>
+    <em:optionsURL>chrome://replywithheadercn/content/rwh-prefs.xul</em:optionsURL>
 
     <!-- Thunderbird -->
     <em:targetApplication>

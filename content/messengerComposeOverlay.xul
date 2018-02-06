@@ -10,8 +10,8 @@
 
 <overlay id="rwhMessengerComposeOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    <script type="application/javascript" src="chrome://replywithheader/content/rwh.js"/>
-    <script type="application/javascript" src="chrome://replywithheader/content/rwh-prefs.js"/>
-    <script type="application/javascript" src="chrome://replywithheader/content/rwh-init.js"/>
-    <script type="application/javascript" src="resource://replywithheader/dateFormat.min.js"/>
+    <script type="application/javascript" src="chrome://replywithheadercn/content/rwh.js"/>
+    <script type="application/javascript" src="chrome://replywithheadercn/content/rwh-prefs.js"/>
+    <script type="application/javascript" src="chrome://replywithheadercn/content/rwh-init.js"/>
+    <script type="application/javascript" src="resource://replywithheadercn/dateFormat.min.js"/>
 </overlay>
